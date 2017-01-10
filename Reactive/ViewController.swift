@@ -9,24 +9,21 @@
 import UIKit
 import ReactiveCocoa
 import ReactiveSwift
+import enum Result.NoError
 
 class ViewController: UIViewController {
 
 	@IBOutlet weak var textField: UITextField!
 	@IBOutlet weak var label: UILabel!
 	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		let signal = textField.reactive.continuousTextValues
-	 
-		signal.observeResult { (result) in
-			guard let string = result.value else{
-				return
-			}
-			self.label.text = string
-		}
+		
+		let textSignal = textField.reactive.continuousTextValues
+		let isHiddenSignal = textSignal.skipNil().map { ($0.characters.count) < 6 }
+		
+		label.reactive.isHidden <~ isHiddenSignal
+		label.reactive.text <~ textSignal
 	}
 }
 
