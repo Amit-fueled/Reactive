@@ -38,18 +38,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEI-Dz-Yfq">
+                                <rect key="frame" x="16" y="87" width="343" height="123"/>
+                                <color key="backgroundColor" red="0.22266815798356249" green="0.70815276689175044" blue="0.72336632013320923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="2H7-g0-rM9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gE-tm-xOx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HEI-Dz-Yfq" firstAttribute="top" secondItem="ANb-Or-R40" secondAttribute="bottom" constant="8" symbolic="YES" id="0Br-Mq-0TK"/>
                             <constraint firstItem="h0W-vI-IXe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1AG-8G-uXJ"/>
                             <constraint firstItem="ANb-Or-R40" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3R4-Zc-vsx"/>
                             <constraint firstItem="h0W-vI-IXe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EGb-mk-cbX"/>
                             <constraint firstItem="ANb-Or-R40" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LLV-9u-KDJ"/>
                             <constraint firstItem="h0W-vI-IXe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="anx-cD-i8U"/>
+                            <constraint firstItem="HEI-Dz-Yfq" firstAttribute="leading" secondItem="ANb-Or-R40" secondAttribute="leading" id="kjn-DW-rKj"/>
                             <constraint firstItem="ANb-Or-R40" firstAttribute="top" secondItem="h0W-vI-IXe" secondAttribute="bottom" constant="8" id="yrs-fd-AVp"/>
+                            <constraint firstItem="HEI-Dz-Yfq" firstAttribute="trailing" secondItem="ANb-Or-R40" secondAttribute="trailing" id="zXd-f4-wzL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="HEI-Dz-Yfq" id="xEZ-ES-RUa"/>
                         <outlet property="label" destination="ANb-Or-R40" id="veI-ap-xq7"/>
                         <outlet property="textField" destination="h0W-vI-IXe" id="Qrs-cs-UY4"/>
                     </connections>
